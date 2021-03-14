@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Shoppinglistitem</string>
+    <string name="add_item">Add Item</string>
+    <string name="title_activity_second">activity_second</string>
+    <string name="rice">Rice</string>
+    <string name="apples">Apples</string>
+    <string name="bread">Bread</string>
+    <string name="oranges">Oranges</string>
+    <string name="shampoo">Shampoo</string>
+    <string name="milk_bread"> Milk Bread</string>
+    <string name="chips">chips</string>
+    <string name="sugar">Sugar</string>
+    <string name="salt">Salt</string>
+    <string name="cheese">Cheess</string>
+</resources>
