@@ -12,4 +12,6 @@
     <string name="sugar">Sugar</string>
     <string name="salt">Salt</string>
     <string name="cheese">Cheess</string>
+    <string name="location">Dhaka</string>
+    <string name="get_location">Get Location</string>
 </resources>

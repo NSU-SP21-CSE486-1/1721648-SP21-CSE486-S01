@@ -3,12 +3,18 @@ package com.example.shoppinglistitem;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+import java.text.BreakIterator;
+
+import static android.net.Uri.parse;
+
+public class MainActivity<uri> extends AppCompatActivity {
 
     private static final String LOG_TAG = MainActivity.class.getSimpleName();
     public static final int TEXT_REQUEST = 1;
@@ -77,5 +83,23 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
+    public void openLocation(View view) {
+
+        BreakIterator location = null;
+        String loc = location.getText().toString();
+
+
+        Uri addressUri = Uri.parse("geo:0,0?q=" + loc);
+        Intent intent = new Intent(Intent.ACTION_VIEW, addressUri);
+
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
+        } else {
+            Log.d("ImplicitIntents", "Can't handle this intent!");
+        }
+    }
 
 }
+
+
+
