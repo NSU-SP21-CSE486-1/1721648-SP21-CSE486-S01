@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Login apps</string>
+    <string name="log_inn">Log in</string>
+    <string name="logincon">logincon</string>
+    <string name="username">username</string>
+    <string name="passward">Passward</string>
+    <string name="log_in">Log in</string>
+</resources>
