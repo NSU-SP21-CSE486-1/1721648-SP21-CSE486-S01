@@ -3,4 +3,26 @@
     <string name="nsu_Text">NSU</string>
     <string name="Student_textdata">Student Database</string>
     <string name="get_start_btn_text">Get Start</string>
+
+    <string name="school_string">School</string>
+    <string name="name">Name</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="nsu_mail_id">Nsu mail Id</string>
+    <string name="student_id">Student id</string>
+    <string name="student_idnew">Student Id</string>
+    <string-array name="School_of_nsu">
+       <item>School of Business &amp; Economics</item>
+       <item>School of Engineering &amp; Physical Sciences</item>
+       <item>School of Humanities &amp; Social Sciences</item>
+       <item>School of Health &amp; Life Sciences</item>
+   </string-array>
+    <string name="Department_Name_String">Department Name</string>
+    <string name="Present_address_string">Present address</string>
+    <string name="Present_address_hint">Country,District,Post Office,Police Station,Postal Code,House/Village/City,Road/Block/Sector</string>
+    <string name="Permanent_address_string">Permanent address</string>
+    <string name="Birth_Date_string">Date of Birth</string>
+    <string name="Birth_Date_hint">Date/Month/Year</string>
+    <string name="button_save_text">Save</string>
+
+
 </resources>
