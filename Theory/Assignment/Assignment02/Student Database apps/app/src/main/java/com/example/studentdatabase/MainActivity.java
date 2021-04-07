@@ -14,7 +14,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        StudentRepository studentRepository= new StudentRepository(getApplicationContext());
         getStartbutton=findViewById(R.id.get_start_btn);
         getStartbutton.setOnClickListener(new View.OnClickListener() {
             @Override
