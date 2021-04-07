@@ -11,16 +11,22 @@ public class Student {
 
     @ColumnInfo(name="studentname")
     public String studentname;
+
     @ColumnInfo(name="phonenumber")
     public String phonenumber;
+
     @ColumnInfo(name = "email_adress")
     public String email_adress;
+
     @ColumnInfo(name = "present_adress")
     public String present_adress;
+
     @ColumnInfo(name = "permanent_adress")
     public String permanent_adress;
+
     @ColumnInfo(name = "school")
     public String school;
+
     @ColumnInfo(name = "departmentname")
     public String departmentname;
 
