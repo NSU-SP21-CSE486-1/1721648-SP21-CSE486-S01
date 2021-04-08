@@ -30,7 +30,7 @@ public class Student {
     @ColumnInfo(name = "departmentname")
     public String departmentname;
 
-    public Student(int studentid, String studentname, String phonenumber, String email_adress, String present_adress, String permanent_adress) {
+    public Student(int studentid, String studentname, String phonenumber, String email_adress, String present_adress, String permanent_adress , String school , String departmentname ) {
         this.studentid = studentid;
         this.studentname = studentname;
         this.phonenumber = phonenumber;

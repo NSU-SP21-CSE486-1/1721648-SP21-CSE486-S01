@@ -11,11 +11,26 @@
     <string name="student_id">Student id</string>
     <string name="student_idnew">Student Id</string>
     <string-array name="School_of_nsu">
-       <item>School of Business &amp; Economics</item>
-       <item>School of Engineering &amp; Physical Sciences</item>
-       <item>School of Humanities &amp; Social Sciences</item>
-       <item>School of Health &amp; Life Sciences</item>
-   </string-array>
+        <item>School of Business &amp; Economics</item>
+        <item>School of Engineering &amp; Physical Sciences</item>
+        <item>School of Humanities &amp; Social Sciences</item>
+        <item>School of Health &amp; Life Sciences</item>
+    </string-array>
+    <string-array name="Department_of_nsu">
+        <item>Department of Electrical Engineering &amp; Computer Science</item>
+        <item>Department of Architecture</item>
+        <item>Department of Environmental Science and Management</item>
+        <item>School of Health &amp; Life Sciences</item>
+        <item>Bachelor of Business Administration</item>
+        <item>Master of Business Administration</item>
+        <item>Department of Economics</item>
+        <item>Department of General and Continue Education</item>
+        <item>Department of English</item>
+        <item>Department of Biochemistry and Microbiology</item>
+        <item>Department of Public Health</item>
+        <item>Department of Pharmacy</item>
+
+    </string-array>
     <string name="Department_Name_String">Department Name</string>
     <string name="Present_address_string">Present address</string>
     <string name="Present_address_hint">Country,District,Post Office,Police Station,Postal Code,House/Village/City,Road/Block/Sector</string>
