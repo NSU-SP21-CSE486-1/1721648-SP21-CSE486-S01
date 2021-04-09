@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -33,6 +34,7 @@ public class Profile extends AppCompatActivity  {
         departmentName = findViewById(R.id.spinner2);
 
 
+
         addInfo.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 if (name.getText().toString().isEmpty()
@@ -43,7 +45,7 @@ public class Profile extends AppCompatActivity  {
                         || permanentAddress.getText().toString().isEmpty()
                         || birthDay.getText().toString().isEmpty()
                         || schoolName.toString().isEmpty()
-                        || departmentName.toString().isEmpty()
+                        || departmentName.getAdapter().toString().isEmpty()
 
                 ) {
                     Toast.makeText(Profile.this, "Please fill up all Section", Toast.LENGTH_SHORT).show();
@@ -68,6 +70,7 @@ public class Profile extends AppCompatActivity  {
                     presentAddress.setText("");
                     permanentAddress.setText("");
                     birthDay.setText("");
+
 
 
                 }
