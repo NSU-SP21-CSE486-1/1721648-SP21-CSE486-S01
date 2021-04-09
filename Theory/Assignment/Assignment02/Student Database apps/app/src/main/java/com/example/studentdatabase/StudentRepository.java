@@ -7,6 +7,8 @@ import android.widget.Toast;
 
 import androidx.room.Room;
 
+import java.util.List;
+
 import static android.os.AsyncTask.execute;
 
 public class StudentRepository {
@@ -40,6 +42,13 @@ public class StudentRepository {
 
 
 
+    }
+
+    //getdata
+    public List<Student> getAllStudents()
+    {
+        List<Student> studentList=studentDatabase.studentDAO().getAll();
+        return studentList;
     }
 
 }

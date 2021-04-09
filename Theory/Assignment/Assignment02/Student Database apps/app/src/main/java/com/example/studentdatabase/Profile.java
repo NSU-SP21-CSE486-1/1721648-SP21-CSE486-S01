@@ -78,9 +78,9 @@ public class Profile extends AppCompatActivity  {
         skipPage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent= new Intent(Profile.this,ViewAllPost.class);
+                Intent intent= new Intent(Profile.this,viewActivity.class);
                 startActivity(intent);
-            }
+           }
         });
 
     }
