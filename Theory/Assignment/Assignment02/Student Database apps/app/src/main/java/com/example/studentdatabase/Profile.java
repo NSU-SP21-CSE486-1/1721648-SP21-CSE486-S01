@@ -45,7 +45,7 @@ public class Profile extends AppCompatActivity  {
                         || permanentAddress.getText().toString().isEmpty()
                         || birthDay.getText().toString().isEmpty()
                         || schoolName.toString().isEmpty()
-                        || departmentName.getAdapter().toString().isEmpty()
+                        || departmentName.toString().isEmpty()
 
                 ) {
                     Toast.makeText(Profile.this, "Please fill up all Section", Toast.LENGTH_SHORT).show();
@@ -70,6 +70,8 @@ public class Profile extends AppCompatActivity  {
                     presentAddress.setText("");
                     permanentAddress.setText("");
                     birthDay.setText("");
+
+
 
 
 
