@@ -23,6 +23,7 @@ public class viewActivity extends AppCompatActivity {
     private static RecyclerView recyclerView ;
     ArrayList<Student> studentArrayList,studentArrayList_search;
     EditText search_id;
+    CustomAdapter customAdapter;
 
 
 
@@ -47,6 +48,7 @@ public class viewActivity extends AppCompatActivity {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
             String text=s.toString();
+            filetr(text);
 
 
             }
@@ -93,12 +95,12 @@ public class viewActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(Void aVoid) {
             super.onPostExecute(aVoid);
-            CustomAdapter customAdapter=new CustomAdapter(studentArrayList,viewActivity.this);
+             customAdapter=new CustomAdapter(studentArrayList,viewActivity.this);
             recyclerView.setAdapter(customAdapter);
         }
     }
     // search Filter
-    public void filetr(String charText, ArrayAdapter<Object> customAdapter)
+    public void filetr(String charText)
     {
         charText = charText.toLowerCase(Locale.getDefault());
         Log.d("filter ",charText+"");
@@ -113,11 +115,16 @@ public class viewActivity extends AppCompatActivity {
             Log.d("load data","fltered");
             for(Student student: studentArrayList_search)
             {
-                if(student.studentname.toLowerCase(Locale.getDefault()).contains(charText))
-                {
+                if (String.valueOf(student.studentid).toLowerCase(Locale.getDefault()).contains(charText)) {
                     studentArrayList.add(student);
-                   customAdapter.notifyDataSetChanged();
+                    customAdapter.notifyDataSetChanged();
+
+                } else if (student.studentname.toLowerCase(Locale.getDefault()).contains(charText)) {
+                    studentArrayList.add(student);
+                    customAdapter.notifyDataSetChanged();
+
                 }
+
             }
         }
     }
