@@ -30,7 +30,7 @@ public class Profile extends AppCompatActivity  {
         birthDay = findViewById(R.id.Birth_Date);
         addInfo = (Button) findViewById(R.id.profile_save_btn);
         skipPage = findViewById(R.id.skip_btn_btn);
-        schoolName = findViewById(R.id.spinner);
+         schoolName = findViewById(R.id.spinner);
         departmentName = findViewById(R.id.spinner2);
 
 
