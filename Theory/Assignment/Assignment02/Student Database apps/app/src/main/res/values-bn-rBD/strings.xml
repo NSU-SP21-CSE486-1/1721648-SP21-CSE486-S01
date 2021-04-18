@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ছাত্র ডাটাবেস</string>
+
+    <string name="nsu_Text">NSU</string>
+    <string name="Student_textdata">Student Database</string>
+    <string name="get_start_btn_text">শুরু করুন</string>
+
+    <string name="school_string">স্কুল</string>
+    <string name="name">নাম</string>
+    <string name="mobile_number"> মোবাইল নম্বর </string>
+    <string name="nsu_mail_id">এনএসইউ মেইল ​​আইডি</string>
+    <string name="student_id">শিক্ষার্থী আইডি</string>
+    <string name="student_idnew">শিক্ষার্থী আইডি</string>
+    <string-array name="School_of_nsu">
+        <item>School of Business &amp; Economics</item>
+        <item>School of Engineering &amp; Physical Sciences</item>
+        <item>School of Humanities &amp; Social Sciences</item>
+        <item>School of Health &amp; Life Sciences</item>
+    </string-array>
+    <string-array name="Department_of_nsu">
+        <item>Department of Electrical Engineering &amp; Computer Science</item>
+        <item>Department of Architecture</item>
+        <item>Department of Environmental Science and Management</item>
+        <item>School of Health &amp; Life Sciences</item>
+        <item>Bachelor of Business Administration</item>
+        <item>Master of Business Administration</item>
+        <item>Department of Economics</item>
+        <item>Department of General and Continue Education</item>
+        <item>Department of English</item>
+        <item>Department of Biochemistry and Microbiology</item>
+        <item>Department of Public Health</item>
+        <item>Department of Pharmacy</item>
+
+    </string-array>
+    <string name="Department_Name_String">বিভাগ নাম</string>
+    <string name="Present_address_string">বর্তমান ঠিকানা</string>
+    <string name="Present_address_hint">দেশ, জেলা, ডাকঘর, পুলিশ স্টেশন, ডাক কোড, বাড়ি / গ্রাম / শহর, রোড / ব্লক / সেক্টর</string>
+    <string name="Permanent_address_string">স্থায়ী ঠিকানা</string>
+    <string name="Birth_Date_string">জন্ম তারিখ</string>
+    <string name="Birth_Date_hint">তারিখ / মাস / বছর</string>
+    <string name="button_save_text">যুক্ত করুন </string>
+    <string name="skip_btn">সমস্ত পোস্ট দেখুন</string>
+    <string name="_0123456789">0123456789</string>
+    <string name="department_name">Department name</string>
+    <string name="_1721648">1721648</string>
+    <string name="search">নাম বা আইডি অনুসন্ধান করুন</string>
+</resources>

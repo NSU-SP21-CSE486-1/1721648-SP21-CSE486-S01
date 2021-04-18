@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -15,7 +16,9 @@ public class Profile extends AppCompatActivity  {
 
     private EditText name,phone,emailAdress,studentId,presentAddress,permanentAddress,birthDay ;
     private Button addInfo,skipPage;
-    private Spinner schoolName, departmentName ;
+    private Spinner schoolName;
+    private AutoCompleteTextView departmentName;
+    String[] DepartmentNames;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +35,10 @@ public class Profile extends AppCompatActivity  {
         skipPage = findViewById(R.id.skip_btn_btn);
          schoolName = findViewById(R.id.spinner);
         departmentName = findViewById(R.id.spinner2);
+        DepartmentNames=getResources().getStringArray(R.array.Department_of_nsu);
+        ArrayAdapter<String> adapter=new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,DepartmentNames);
+        departmentName.setThreshold(1);
+        departmentName.setAdapter(adapter);
 
 
 
@@ -45,7 +52,7 @@ public class Profile extends AppCompatActivity  {
                         || permanentAddress.getText().toString().isEmpty()
                         || birthDay.getText().toString().isEmpty()
                         || schoolName.toString().isEmpty()
-                        || departmentName.toString().isEmpty()
+                        || departmentName.getText().toString().isEmpty()
 
                 ) {
                     Toast.makeText(Profile.this, "Please fill up all Section", Toast.LENGTH_SHORT).show();
@@ -70,6 +77,7 @@ public class Profile extends AppCompatActivity  {
                     presentAddress.setText("");
                     permanentAddress.setText("");
                     birthDay.setText("");
+                    departmentName.setText("");
 
 
 

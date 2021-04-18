@@ -1,5 +1,6 @@
 package com.example.studentdatabase;
 
+import android.app.Dialog;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,6 +16,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
 
     private ArrayList<Student> dataset;
     Context context;
+    Dialog myDialog;
     public static class MyViewHolder extends RecyclerView.ViewHolder{
         TextView  studentid_card;
         TextView studentname_card ;
@@ -25,7 +27,6 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
             super(itemView);
             this.studentid_card=(TextView)itemView.findViewById(R.id.studentid_card);
             this.studentname_card=(TextView)itemView.findViewById(R.id.studentname_card);
-            this.departname_cardview=(TextView)itemView.findViewById(R.id.departname_cardview);
             this.MobileNumber_cardview=(TextView)itemView.findViewById(R.id.MobileNumber_cardview);
         }
 
@@ -67,4 +68,10 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
     public int getItemCount() {
         return dataset.size();
     }
+
+
+
+    
+
+
 }
