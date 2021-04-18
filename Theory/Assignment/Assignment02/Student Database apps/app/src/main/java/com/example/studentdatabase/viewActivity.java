@@ -11,6 +11,7 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 
 import java.util.ArrayList;
@@ -24,6 +25,8 @@ public class viewActivity extends AppCompatActivity {
     ArrayList<Student> studentArrayList,studentArrayList_search;
     EditText search_id;
     CustomAdapter customAdapter;
+    Button btn;
+
 
 
 
