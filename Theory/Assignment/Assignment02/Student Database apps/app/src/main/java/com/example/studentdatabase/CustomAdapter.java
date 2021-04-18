@@ -2,10 +2,13 @@ package com.example.studentdatabase;
 
 import android.app.Dialog;
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -16,19 +19,26 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
 
     private ArrayList<Student> dataset;
     Context context;
-    Dialog myDialog;
+
     public static class MyViewHolder extends RecyclerView.ViewHolder{
         TextView  studentid_card;
         TextView studentname_card ;
         TextView  departname_cardview;
         TextView MobileNumber_cardview;
+      //  public Button popupde;
+
         public MyViewHolder (View itemView)
         {
             super(itemView);
             this.studentid_card=(TextView)itemView.findViewById(R.id.studentid_card);
             this.studentname_card=(TextView)itemView.findViewById(R.id.studentname_card);
             this.MobileNumber_cardview=(TextView)itemView.findViewById(R.id.MobileNumber_cardview);
+            //this.popupde=(Button)itemView.findViewById(R.id.popupDetails);
+
         }
+
+        //extra test
+        
 
 
     }
@@ -56,7 +66,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
         TextView MobileNumber_cardview=holder.MobileNumber_cardview;
         studentid_card.setText(dataset.get(position).studentid+"");
         studentname_card.setText(dataset.get(position).studentname+"");
-        departname_cardview.setText(dataset.get(position).departmentname+"");
+
         MobileNumber_cardview.setText(dataset.get(position).phonenumber+"");
 
 
