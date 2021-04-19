@@ -54,6 +54,10 @@ public class Profile extends AppCompatActivity  {
         departmentName.setAdapter(adapter);
 
 
+        //Initialize Validation Style
+
+
+
 
 
 
@@ -72,7 +76,18 @@ public class Profile extends AppCompatActivity  {
                 ) {
                     Toast.makeText(Profile.this, "Please fill up all Section", Toast.LENGTH_SHORT).show();
 
-                } else {
+                }
+                else if(phone.getText().toString().length()>11  ){
+                    Toast.makeText(Profile.this, "Please input valid mobile number of 11 digits", Toast.LENGTH_SHORT).show();
+                }
+                else if(studentId.getText().toString().length()>7  ){
+                    Toast.makeText(Profile.this, "Please input your 7 digit of nsu id", Toast.LENGTH_SHORT).show();
+                }
+
+
+
+
+                else {
                     String name1 = name.getText().toString().trim();
                     String phone1 = phone.getText().toString().trim();
                     String emailadress1 = emailAdress.getText().toString().trim();
