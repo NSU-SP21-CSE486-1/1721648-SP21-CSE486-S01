@@ -25,7 +25,7 @@ public class viewActivity extends AppCompatActivity {
     ArrayList<Student> studentArrayList,studentArrayList_search;
     EditText search_id;
     CustomAdapter customAdapter;
-    Button btn;
+
 
 
 

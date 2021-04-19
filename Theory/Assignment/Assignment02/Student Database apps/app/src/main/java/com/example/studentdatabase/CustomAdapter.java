@@ -76,7 +76,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
         MobileNumber_cardview.setText(dataset.get(position).phonenumber+"");
 
 
-        btn.setOnClickListener(new View.OnClickListener() {
+        holder.btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 AlertDialog.Builder builder =new AlertDialog.Builder(v.getRootView().getContext());

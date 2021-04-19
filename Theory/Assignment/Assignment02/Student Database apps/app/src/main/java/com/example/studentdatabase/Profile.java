@@ -81,7 +81,7 @@ public class Profile extends AppCompatActivity  {
                     String permanentadress1 = permanentAddress.getText().toString().trim();
                     String birthDay1 = datePickerDialog.toString().trim();
                     String schoolName1=schoolName.toString().trim();
-                    String departmentName1=departmentName.toString().trim();
+                    String departmentName1=departmentName.getText().toString().trim();
                     StudentRepository studentRepository = new StudentRepository(getApplicationContext());
                     Student student = new Student(Integer.parseInt(studentid1),name1,phone1,emailadress1,presentadress1,permanentadress1,schoolName1,departmentName1);
                     studentRepository.InsertTask(student);
