@@ -1,19 +1,35 @@
-#Sample Readme.md to create folder structure
+#Sample Readme.md to create folder structure 
+
+
 #Create an application that takes the following input from a NSU Student
+
+
 #Name according to NSU ID
 -7 Digit Student ID
+
+
 #School (Use a dropdown list)
 -This dropdown list should be defined in the resources section and not hardcoded. 
+
+
 #Department (Use a dropdown list)
 -This dropdown list should be defined in the resources section.
 -Department list should be specific to each school.
+
+
 #Date of Birth
 -Use a date picker
+
+
 #Phone number
 -Should be Bangladeshi phone number format
+
+
 #NID number
 -NID number should be in the new format.
 -If the number does not match NID number format (10 digit), a error message should be displayed.
+
+
 #Present Address
 -Country
 -District
@@ -21,8 +37,10 @@
 -Police Station
 -Postal Code
 -House/Village/City
--Road/Block/Sector
--Permanent Address
+-Road/Block/Sector  
+
+
+#Permanent Address
 -Country
 -District
 -Post Office
