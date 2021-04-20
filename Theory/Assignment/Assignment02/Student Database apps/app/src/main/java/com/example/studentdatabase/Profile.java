@@ -19,7 +19,7 @@ import java.util.Calendar;
 
 public class Profile extends AppCompatActivity  {
 
-    private EditText name,phone,emailAdress,studentId,presentAddress,permanentAddress ;
+    private EditText name,phone,emailAdress,studentId,presentAddress,permanentAddress,nId ;
     private DatePickerDialog datePickerDialog;
     private Button dateButton;
     private Button addInfo,skipPage;
@@ -37,6 +37,7 @@ public class Profile extends AppCompatActivity  {
         studentId = findViewById(R.id.studentid);
         presentAddress = findViewById(R.id.presentAddressText);
         permanentAddress = findViewById(R.id.Permanent_address_id);
+        nId = findViewById(R.id.Nid);
 
 
        // birthDay = findViewById(R.id.Birth_Date);
@@ -53,13 +54,7 @@ public class Profile extends AppCompatActivity  {
         departmentName.setThreshold(1);
         departmentName.setAdapter(adapter);
 
-
         //Initialize Validation Style
-
-
-
-
-
 
         addInfo.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -72,16 +67,20 @@ public class Profile extends AppCompatActivity  {
                         || datePickerDialog.toString().isEmpty()
                         || schoolName.toString().isEmpty()
                         || departmentName.getText().toString().isEmpty()
+                        ||nId.getText().toString().isEmpty()
 
                 ) {
                     Toast.makeText(Profile.this, "Please fill up all Section", Toast.LENGTH_SHORT).show();
 
                 }
-                else if(phone.getText().toString().length()>11  ){
+                else if(phone.getText().toString().length()>11 || phone.getText().toString().length()<11){
                     Toast.makeText(Profile.this, "Please input valid mobile number of 11 digits", Toast.LENGTH_SHORT).show();
                 }
-                else if(studentId.getText().toString().length()>7  ){
+                else if(studentId.getText().toString().length()>7 || studentId.getText().toString().length()<7  ){
                     Toast.makeText(Profile.this, "Please input your 7 digit of nsu id", Toast.LENGTH_SHORT).show();
+                }
+                else if(nId.getText().toString().length()>10 || nId.getText().toString().length()<10  ){
+                    Toast.makeText(Profile.this, "Please input your 10 digit of National id", Toast.LENGTH_SHORT).show();
                 }
 
 
@@ -97,6 +96,7 @@ public class Profile extends AppCompatActivity  {
                     String birthDay1 = datePickerDialog.toString().trim();
                     String schoolName1=schoolName.toString().trim();
                     String departmentName1=departmentName.getText().toString().trim();
+                    String Nid1=nId.getText().toString().trim();
                     StudentRepository studentRepository = new StudentRepository(getApplicationContext());
                     Student student = new Student(Integer.parseInt(studentid1),name1,phone1,emailadress1,presentadress1,permanentadress1,schoolName1,departmentName1);
                     studentRepository.InsertTask(student);
@@ -107,6 +107,7 @@ public class Profile extends AppCompatActivity  {
                     presentAddress.setText("");
                     permanentAddress.setText("");
                     departmentName.setText("");
+
 
 
 

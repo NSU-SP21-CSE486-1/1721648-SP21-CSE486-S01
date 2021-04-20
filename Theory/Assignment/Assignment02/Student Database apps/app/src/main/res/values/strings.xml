@@ -9,7 +9,8 @@
     <string name="mobile_number">Mobile Number</string>
     <string name="nsu_mail_id">Nsu mail Id</string>
     <string name="student_id">Student id</string>
-    <string name="student_idnew">Student Id</string>
+    <string name="student_idnew">7 digit of student Id</string>
+    <string name="nidtextView" translatable="false"> National Id</string>
     <string-array name="School_of_nsu">
         <item>School of Business &amp; Economics</item>
         <item>School of Engineering &amp; Physical Sciences</item>
@@ -43,7 +44,8 @@
     <string name="department_name">Department name</string>
     <string name="_1721648">1721648</string>
     <string name="search">Search name or ID</string>
-    <string name="change_language">Change Language</string>
+    <string name="change_language" translatable="false">Change Language</string>
+
 
 
 

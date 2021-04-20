@@ -73,6 +73,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:background="#FFE500"
+            android:dropDownWidth="wrap_content"
             android:entries="@array/School_of_nsu"
             android:spinnerMode="dropdown"
             app:layout_constraintEnd_toEndOf="parent"
@@ -91,7 +92,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.065"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/studentid" />
+            app:layout_constraintTop_toBottomOf="@+id/Nid" />
 
         <TextView
             android:id="@+id/department_name_textview"
@@ -229,6 +230,32 @@
             app:layout_constraintHorizontal_bias="0.375"
             app:layout_constraintStart_toEndOf="@+id/profile_save_btn"
             app:layout_constraintTop_toBottomOf="@+id/datePickerButton" />
+
+        <EditText
+            android:id="@+id/Nid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:ems="18"
+            android:hint="10 Digit Nid Number"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.529"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/StudentNidtextView" />
+
+        <TextView
+            android:id="@+id/StudentNidtextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/nidtextView"
+            android:textColor="#000000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.06"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/studentid" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>>
 </ScrollView>

@@ -88,7 +88,8 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                 tvname=dialogView.findViewById(R.id.tvname);
                 tvdepartment=dialogView.findViewById(R.id.tvdepartment);
                 tvname.setText(dataset.get(position).studentname);
-                tvdepartment.setText(dataset.get(position).departmentname);
+               // tvdepartment.setText(dataset.get(position).departmentname.getDepartmentname());
+                tvdepartment.setText(dataset.get(holder.getAdapterPosition()).getDepartmentname());
                 builder.setView(dialogView);
                 builder.setCancelable(true);
                 builder.show();

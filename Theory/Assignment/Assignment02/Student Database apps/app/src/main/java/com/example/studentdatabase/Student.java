@@ -27,8 +27,18 @@ public class Student {
     @ColumnInfo(name = "school")
     public String school;
 
+
+    public String getDepartmentname() {
+        return departmentname;
+    }
+
+    public void setDepartmentname(String departmentname) {
+        this.departmentname = departmentname;
+    }
+
     @ColumnInfo(name = "departmentname")
     public String departmentname;
+
 
     public Student(int studentid, String studentname, String phonenumber, String email_adress, String present_adress, String permanent_adress , String school , String departmentname ) {
         this.studentid = studentid;
