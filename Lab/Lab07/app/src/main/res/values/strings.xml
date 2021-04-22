@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">HelloSharedPrefs</string>
-    <string name="app_name">SharedPrefs</string>
     <string name="blue_button">Blue</string>
     <string name="green_button">Green</string>
     <string name="red_button">Red</string>
