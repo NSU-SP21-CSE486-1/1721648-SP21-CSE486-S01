@@ -17,7 +17,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHolder> {
+public abstract class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHolder> {
 
     private ArrayList<Student> dataset;
     Context context;
@@ -97,21 +97,17 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
             }
         });
 
+    }
 
 
-
+    public CustomAdapter() {
 
 
     }
 
-    @Override
-    public int getItemCount() {
-        return dataset.size();
-    }
 
 
 
-    
 
 
 }

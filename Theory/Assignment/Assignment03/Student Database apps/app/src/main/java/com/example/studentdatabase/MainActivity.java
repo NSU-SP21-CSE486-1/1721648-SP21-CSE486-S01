@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         actionbar.setTitle(getResources().getString(R.string.app_name));
 
 
-        StudentRepository studentRepository= new StudentRepository(getApplicationContext());
+
         getStartbutton=findViewById(R.id.get_start_btn);
         changeLang=findViewById(R.id.language);
         changeLang.setOnClickListener(new View.OnClickListener() {

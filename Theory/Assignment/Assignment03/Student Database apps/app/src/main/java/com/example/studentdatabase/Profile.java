@@ -15,6 +15,9 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.util.Calendar;
 
 public class Profile extends AppCompatActivity  {
@@ -26,6 +29,7 @@ public class Profile extends AppCompatActivity  {
     private Spinner schoolName;
     private AutoCompleteTextView departmentName;
     String[] DepartmentNames;
+    DatabaseReference databaseReference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +42,7 @@ public class Profile extends AppCompatActivity  {
         presentAddress = findViewById(R.id.presentAddressText);
         permanentAddress = findViewById(R.id.Permanent_address_id);
         nId = findViewById(R.id.Nid);
+        databaseReference= FirebaseDatabase.getInstance().getReference("students");
 
 
        // birthDay = findViewById(R.id.Birth_Date);
@@ -86,7 +91,7 @@ public class Profile extends AppCompatActivity  {
 
 
 
-                else {
+              /*  else {
                     String name1 = name.getText().toString().trim();
                     String phone1 = phone.getText().toString().trim();
                     String emailadress1 = emailAdress.getText().toString().trim();
@@ -113,11 +118,43 @@ public class Profile extends AppCompatActivity  {
 
 
 
+                } */
+                else{
+                    saveData();
                 }
 
             }
 
+            private void saveData() {
+                String name1 = name.getText().toString().trim();
+                String phone1 = phone.getText().toString().trim();
+                String emailadress1 = emailAdress.getText().toString().trim();
+                String studentid1 = studentId.getText().toString().trim();
+                String presentadress1 = presentAddress.getText().toString().trim();
+                String permanentadress1 = permanentAddress.getText().toString().trim();
+                String birthDay1 = datePickerDialog.toString().trim();
+                String schoolName1=schoolName.toString().trim();
+                String departmentName1=departmentName.getText().toString().trim();
+                String Nid1=nId.getText().toString().trim();
+               // StudentRepository studentRepository = new StudentRepository(getApplicationContext());
+                String key =databaseReference.push().getKey();
+                Student student = new Student(name1,phone1,emailadress1,studentid1,presentadress1,permanentadress1,birthDay1,schoolName1,departmentName1,Nid1);
+              //  studentRepository.InsertTask(student);
+                databaseReference.child(key).setValue(student);
+                name.setText("");
+                phone.setText("");
+                studentId.setText("");
+                emailAdress.setText("");
+                presentAddress.setText("");
+                permanentAddress.setText("");
+                departmentName.setText("");
+                nId.setText("");
+
+            }
+
         });
+
+
         skipPage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -1,5 +1,6 @@
 package com.example.studentdatabase;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -14,6 +15,12 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
@@ -25,6 +32,7 @@ public class viewActivity extends AppCompatActivity {
     ArrayList<Student> studentArrayList,studentArrayList_search;
     EditText search_id;
     CustomAdapter customAdapter;
+    DatabaseReference databaseReference;
 
 
 
@@ -41,7 +49,23 @@ public class viewActivity extends AppCompatActivity {
         recyclerView.setItemAnimator(new DefaultItemAnimator());
 
         search_id=(EditText)findViewById(R.id.search_id);
+        databaseReference= FirebaseDatabase.getInstance().getReference("students");
 
+        customAdapter= new CustomAdapter(studentArrayList, viewActivity.this) {
+            @Override
+            public int getItemCount() {
+                return 0;
+            }
+        };
+        studentArrayList=new ArrayList<>();
+        studentArrayList_search=new ArrayList<>();
+
+
+
+
+
+
+       //Search
         search_id.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -62,26 +86,51 @@ public class viewActivity extends AppCompatActivity {
             }
         });
 
-        new LoadDataTask().execute();
 
 
 
     }
-    class LoadDataTask extends AsyncTask<Void,Void,Void>
+    @Override
+    public void onStart() {
+        databaseReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                studentArrayList.clear();
+                for(DataSnapshot snapshot1 : snapshot.getChildren())
+                {
+                    Student student;
+                    student = snapshot1.getValue(Student.class);
+                    studentArrayList.add(student);
+
+                }
+                recyclerView.setAdapter(customAdapter);
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+        super.onStart();
+    }
+
+
+   /* class LoadDataTask extends AsyncTask<Void,Void,Void>
 
     {
-        StudentRepository studentRepository ;
+
         List<Student> studentList;
 
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-            studentRepository=new StudentRepository(getApplicationContext());
+
         }
 
         @Override
         protected Void doInBackground(Void... voids) {
-            studentList=studentRepository.getAllStudents();
+            studentList= (List<Student>)databaseReference.getDatabase();
             studentArrayList=new ArrayList<>();
             studentArrayList_search=new ArrayList<>();
 
@@ -101,7 +150,7 @@ public class viewActivity extends AppCompatActivity {
              customAdapter=new CustomAdapter(studentArrayList,viewActivity.this);
             recyclerView.setAdapter(customAdapter);
         }
-    }
+    } */
     // search Filter
     public void filetr(String charText)
     {
