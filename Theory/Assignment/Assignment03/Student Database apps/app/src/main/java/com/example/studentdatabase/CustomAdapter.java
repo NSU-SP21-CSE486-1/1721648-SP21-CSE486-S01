@@ -75,6 +75,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
             }
         });
 
+
     }
 
     @Override
@@ -111,6 +112,10 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
 
 
     }
+    public CustomAdapter() {
+
+
+    }
 }
 
 
@@ -126,7 +131,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
 
     private ArrayList<Student> dataset;
     Context context;
-    
+
 
 
 
@@ -149,7 +154,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
         }
 
         //extra test
-        
+
 
 
     }

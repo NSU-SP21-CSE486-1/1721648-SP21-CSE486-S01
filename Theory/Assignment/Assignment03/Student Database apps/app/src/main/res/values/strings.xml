@@ -45,8 +45,9 @@
     <string name="_1721648">1721648</string>
     <string name="search">Search name or ID</string>
     <string name="change_language" translatable="false">Change Language</string>
-
-
+    <string name="log_in">Log in</string>
+    <string name="passward">Passward</string>
+    <string name="email">Email</string>
 
 
 </resources>
