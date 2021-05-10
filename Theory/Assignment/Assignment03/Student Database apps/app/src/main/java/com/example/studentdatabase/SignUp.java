@@ -15,6 +15,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 
 public class SignUp extends AppCompatActivity implements View.OnClickListener {
     EditText signUpemailText,signUpPasswardText;
@@ -89,11 +90,22 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
-                    Toast.makeText(getApplicationContext(),"Register is successful",Toast.LENGTH_SHORT).show();
+                    finish();
+                    Intent intent=new Intent(getApplicationContext(),Profile.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                    startActivity(intent);
 
-                } else {
+
+                }
+                else if(task.getException() instanceof FirebaseAuthUserCollisionException)
+
+                    {
+                        Toast.makeText(getApplicationContext(),"User is already Registered",Toast.LENGTH_SHORT).show();
+                    }
+
+                else {
                     // If sign in fails, display a message to the user.
-                    Toast.makeText(getApplicationContext(),"Register is not successful",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"Error"+task.getException().getMessage(),Toast.LENGTH_SHORT).show();
 
                 }
             }
