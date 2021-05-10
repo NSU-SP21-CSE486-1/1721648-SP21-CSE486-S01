@@ -49,7 +49,8 @@
     <string name="passward" translatable="false">Passward</string>
     <string name="email" translatable="false">Email</string>
     <string name="msgSignUp" translatable="false">Are you not registered?Sign Up</string>
-    <string name="msgSignIn" translatable="false">Are you not registered?Log In</string>
+    <string name="msgSignIn" translatable="false">Are you ALREADY registered?Log In</string>
+    <string name="SignUp" translatable="false">translatable="false">Sign Up</string>
 
 
 </resources>
