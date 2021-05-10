@@ -31,6 +31,8 @@ public class Profile extends AppCompatActivity  {
     String[] DepartmentNames;
     DatabaseReference databaseReference;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -149,6 +151,7 @@ public class Profile extends AppCompatActivity  {
                 permanentAddress.setText("");
                 departmentName.setText("");
                 nId.setText("");
+                Toast.makeText(getApplicationContext(),"info added",Toast.LENGTH_SHORT).show();
 
             }
 

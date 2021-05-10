@@ -11,6 +11,16 @@ public class Student {
 
     public String studentname;
 
+    public Student(int studentid, String studentname, String phonenumber, String email_adress, String present_adress, String school, String departmentname, String permanent_adress) {
+        this.studentid = studentid;
+        this.studentname = studentname;
+        this.phonenumber = phonenumber;
+        this.email_adress = email_adress;
+        this.present_adress = present_adress;
+        this.school = school;
+        this.departmentname = departmentname;
+        this.permanent_adress = permanent_adress;
+    }
 
     public String phonenumber;
 
@@ -21,11 +31,11 @@ public class Student {
     public String present_adress;
 
 
-    public String permanent_adress;
+    public String school;
+    public String departmentname;
 
     public Student(String name1, String phone1, String emailadress1, String studentid1, String presentadress1, String permanentadress1, String birthDay1, String schoolName1, String departmentName1, String nid1) {
     }
-
 
     public int getStudentid() {
         return studentid;
@@ -67,14 +77,6 @@ public class Student {
         this.present_adress = present_adress;
     }
 
-    public String getPermanent_adress() {
-        return permanent_adress;
-    }
-
-    public void setPermanent_adress(String permanent_adress) {
-        this.permanent_adress = permanent_adress;
-    }
-
     public String getSchool() {
         return school;
     }
@@ -82,9 +84,6 @@ public class Student {
     public void setSchool(String school) {
         this.school = school;
     }
-
-    public String school;
-
 
     public String getDepartmentname() {
         return departmentname;
@@ -94,9 +93,16 @@ public class Student {
         this.departmentname = departmentname;
     }
 
+    public String getPermanent_adress() {
+        return permanent_adress;
+    }
 
-    public String departmentname;
+    public void setPermanent_adress(String permanent_adress) {
+        this.permanent_adress = permanent_adress;
+    }
 
-
+    public String permanent_adress;
 
 }
+
+

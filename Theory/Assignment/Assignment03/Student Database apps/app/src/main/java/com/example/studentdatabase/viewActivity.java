@@ -51,7 +51,7 @@ public class viewActivity extends AppCompatActivity {
         search_id=(EditText)findViewById(R.id.search_id);
         databaseReference= FirebaseDatabase.getInstance().getReference("students");
 
-        customAdapter= new CustomAdapter(studentArrayList, viewActivity.this) {
+        customAdapter= new CustomAdapter(viewActivity.this, studentArrayList) {
             @Override
             public int getItemCount() {
                 return 0;
@@ -90,30 +90,41 @@ public class viewActivity extends AppCompatActivity {
 
 
     }
+
     @Override
-    public void onStart() {
-        databaseReference.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                studentArrayList.clear();
-                for(DataSnapshot snapshot1 : snapshot.getChildren())
-                {
-                    Student student;
-                    student = snapshot1.getValue(Student.class);
-                    studentArrayList.add(student);
-
-                }
-                recyclerView.setAdapter(customAdapter);
-
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });
+    protected void onStart() {
         super.onStart();
+        customAdapter.startListening();
     }
+    @Override
+    protected void onStop() {
+        super.onStop();
+        customAdapter.stopListening();
+    }
+    /// @Override
+   // public void onStart() {
+        //   databaseReference.addValueEventListener(new ValueEventListener() {
+        //    @Override
+        //  public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+       // studentArrayList.clear();
+       // for (DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()) {
+         //   Student student = dataSnapshot1.getValue(Student.class);
+
+         //   studentArrayList.add(student);
+
+       // }
+      //  recyclerView.setAdapter(customAdapter);
+
+  //  }
+
+          //  @Override
+          //  public void onCancelled(@NonNull DatabaseError error) {
+
+        //    }
+       /// });
+       // super.onStart();
+  //  }
 
 
    /* class LoadDataTask extends AsyncTask<Void,Void,Void>
