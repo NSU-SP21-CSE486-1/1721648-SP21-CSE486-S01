@@ -1,11 +1,14 @@
 package com.example.studentdatabase;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
@@ -15,6 +18,7 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -30,6 +34,7 @@ public class Profile extends AppCompatActivity  {
     private AutoCompleteTextView departmentName;
     String[] DepartmentNames;
     DatabaseReference databaseReference;
+    FirebaseAuth mAuth;
 
 
 
@@ -37,6 +42,7 @@ public class Profile extends AppCompatActivity  {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
+        mAuth=FirebaseAuth.getInstance();
         name = findViewById(R.id.editTextTextPersonName);
         phone = findViewById(R.id.editTextPhone);
         emailAdress = findViewById(R.id.editTextTextEmailAddress);
@@ -168,6 +174,25 @@ public class Profile extends AppCompatActivity  {
 
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.menu_layout,menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+        if(item.getItemId()==R.id.signOutMenuId)
+        {
+            FirebaseAuth.getInstance().signOut();
+            finish();
+            Intent intent=new Intent(getApplicationContext(),SignUp.class);
+            startActivity(intent);
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
     private String getTodaysDate()
     {
         Calendar cal = Calendar.getInstance();
@@ -243,4 +268,5 @@ public class Profile extends AppCompatActivity  {
     {
         datePickerDialog.show();
     }
+
 }
