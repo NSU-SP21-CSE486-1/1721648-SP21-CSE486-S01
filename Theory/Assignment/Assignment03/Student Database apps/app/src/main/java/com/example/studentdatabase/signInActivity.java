@@ -56,6 +56,12 @@ public class signInActivity extends AppCompatActivity implements View.OnClickLis
     private void userLogin() {
         String email = logInemailText.getText().toString().trim();
         String password = logInPasswardText.getText().toString().trim();
+        //Create a session
+        SessionManager sessionManager = new SessionManager(signInActivity.this);
+        sessionManager.createLoginSession(email,password);
+
+
+
         //checking the validity of the email
         if (email.isEmpty()) {
             logInemailText.setError("Enter an email address");
@@ -87,7 +93,8 @@ public class signInActivity extends AppCompatActivity implements View.OnClickLis
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
                     finish();
-                    Intent intent=new Intent(getApplicationContext(),Profile.class);
+                    Intent intent;
+                    intent = new Intent(getApplicationContext(),Profile.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivity(intent);
 
