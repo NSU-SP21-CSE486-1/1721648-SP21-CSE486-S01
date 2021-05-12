@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">NSUCPC</string>
+    <string name="todo">TODO</string>
+    <string name="textlogounder">Career and Placement Center of North South University</string>
 </resources>
