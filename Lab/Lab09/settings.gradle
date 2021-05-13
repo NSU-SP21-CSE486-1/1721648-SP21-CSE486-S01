@@ -1,0 +1,2 @@
+rootProject.name = "Memory Profiler tool"
+include ':app'
