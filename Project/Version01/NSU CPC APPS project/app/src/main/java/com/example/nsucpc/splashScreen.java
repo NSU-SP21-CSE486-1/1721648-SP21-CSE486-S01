@@ -14,15 +14,11 @@ public class splashScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
         Handler handler=new Handler();
-        handler.postDelayed(new Runnable(){
+        handler.postDelayed(() -> {
+            startActivity(new Intent(splashScreen.this,MemberStudentPortal.class));
+            finish();
 
-                                @Override
-                                public void run() {
-                                    startActivity(new Intent(splashScreen.this,MemberStudentPortal.class));
-                                    finish();
-
-                                }
-                            },3000
+        },3000
         
         );
         Toast.makeText(this,"Welcome to NSU CPC",Toast.LENGTH_SHORT).show();

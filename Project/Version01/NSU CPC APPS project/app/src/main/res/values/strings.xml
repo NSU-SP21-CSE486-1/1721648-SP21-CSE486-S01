@@ -8,5 +8,20 @@
     <string name="NsuCpc">NSU CPC</string>
     <string name="welRig">Create Your Account</string>
     <string name="cpcmember">CPC Member Sign Up</string>
+    <string name="Studentmember">Student Sign Up</string>
     <string name="name1">Name</string>
+    <string name="passward">Passward</string>
+    <string name="email">Enter your NSU mail Id</string>
+    <string name="StudentId">Enter you 7th digit of student Id</string>
+    <string name="mobilenumber">Mobile Number</string>
+    <string name="termagree"> I agree to NSU CPC’s Terms and Conditions</string>
+    <string name="name">Name</string>
+    <string name="buttonstudentRig">Button</string>
+    <string name="todoo">TODO</string>
+    <string name="signupbtntext">Sign Up</string>
+    <string name="msgSignIn">Are you ALREADY registered?Log In</string>
+    <string name="stlogintext">Student Login</string>
+    <string name="stloginbtn">Log in</string>
+    <string name="stforgotpasstext">Forgot Passward?</string>
+    <string name="msgSignUp">Are you not registered?Sign Up</string>
 </resources>
