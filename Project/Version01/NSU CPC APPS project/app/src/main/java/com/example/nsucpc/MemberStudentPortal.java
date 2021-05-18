@@ -25,5 +25,13 @@ public class MemberStudentPortal extends AppCompatActivity {
 
             }
         });
+        cpcMemberPortal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(MemberStudentPortal.this,CpcmemberSignUpActivity.class);
+                startActivity(intent);
+
+            }
+        });
     }
 }
