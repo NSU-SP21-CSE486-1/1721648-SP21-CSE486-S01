@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "102529175310",
+    "project_id": "nsucpc-7398f",
+    "storage_bucket": "nsucpc-7398f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:102529175310:android:2f1fb091982536234c115f",
+        "android_client_info": {
+          "package_name": "com.example.nsucpc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "102529175310-erabdhv12u0bkss7u4i5hkiva4cnse4r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvmm5zMx9HAz_p6LaKs_TSINnOf7fETQU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "102529175310-erabdhv12u0bkss7u4i5hkiva4cnse4r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
