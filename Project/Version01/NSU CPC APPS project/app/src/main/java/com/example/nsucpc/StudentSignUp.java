@@ -1,5 +1,6 @@
 package com.example.nsucpc;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -10,8 +11,14 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthUserCollisionException;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.regex.Pattern;
 
@@ -82,8 +89,19 @@ public class StudentSignUp extends AppCompatActivity implements View.OnClickList
             studentSignUpPassward.requestFocus();
             return;
         }
+        if(editTextStudentPassword.length()<6){
+            studentSignUpPassward.setError("Min passward length should be 6 characters");
+            studentSignUpPassward.requestFocus();
+            return;
+
+        }
         if(editTextStudentId.isEmpty()){
             studentSignUpId.setError("Fill Up your nsu student id");
+            studentSignUpId.requestFocus();
+            return;
+        }
+        if(editTextStudentId.length()>7 ||editTextStudentId.length()<7){
+            studentSignUpId.setError("Please input your 7 digit of nsu id");
             studentSignUpId.requestFocus();
             return;
         }
@@ -92,6 +110,51 @@ public class StudentSignUp extends AppCompatActivity implements View.OnClickList
             studentSignUpPhone.requestFocus();
             return;
         }
+        if(editTextStudentPhone.length()>11 ||editTextStudentPhone.length()<11){
+            studentSignUpPhone.setError("Please input valid mobile number of 11 digits");
+            studentSignUpPhone.requestFocus();
+            return;
+        }
+        mAuth.createUserWithEmailAndPassword(editTextStudentEmailAddress, editTextStudentPassword).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if (task.isSuccessful()) {
+                    studentUser studentuser =new studentUser(editTextPersonName, editTextStudentEmailAddress,editTextStudentId,editTextStudentPhone);
+                    FirebaseDatabase.getInstance().getReference("StudentUsers")
+                            .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                            .setValue(studentuser).addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull  Task<Void> task) {
+                            if (task.isSuccessful()){
+                                Toast.makeText(getApplicationContext(),"User has been Registered successfully",Toast.LENGTH_SHORT).show();
+                            }
+                            else{
+                                Toast.makeText(getApplicationContext(),"Failed to register !Try again!",Toast.LENGTH_SHORT).show();
+                            }
+
+                        }
+                    });
+
+                    //finish();
+                   // Intent intent=new Intent(getApplicationContext(),StudentLogIn.class);
+                    //intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                    //startActivity(intent);
+
+
+                }
+                else if(task.getException() instanceof FirebaseAuthUserCollisionException)
+
+                {
+                    Toast.makeText(getApplicationContext(),"User is already Registered",Toast.LENGTH_SHORT).show();
+                }
+
+                else {
+                    // If sign in fails, display a message to the user.
+                    Toast.makeText(getApplicationContext(),"Error"+task.getException().getMessage(),Toast.LENGTH_SHORT).show();
+
+                }
+            }
+        });
 
 
     }
