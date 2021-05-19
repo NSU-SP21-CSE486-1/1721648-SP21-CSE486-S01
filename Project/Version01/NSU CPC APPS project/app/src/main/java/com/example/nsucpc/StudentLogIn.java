@@ -37,6 +37,7 @@ public class StudentLogIn extends AppCompatActivity implements View.OnClickListe
         mAuth=FirebaseAuth.getInstance();
         studentlogInActRigText.setOnClickListener(this);
         studentLogInButton.setOnClickListener(this);
+        studentForgotPassward.setOnClickListener(this);
 
 
     }
@@ -47,8 +48,12 @@ public class StudentLogIn extends AppCompatActivity implements View.OnClickListe
            case R.id.studentrlogactRigText:
                startActivity(new Intent(this,StudentSignUp.class));
                break;
+           case R.id.studentForgotPassward:
+               startActivity(new Intent(this,StudentForgotPassward.class));
+               break;
            case R.id.studentLoginButton:
                studerUserLogin();
+               break;
 
        }
 
