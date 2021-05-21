@@ -40,7 +40,7 @@
         app:layout_constraintTop_toBottomOf="@+id/ccpcMemberLoginpassLogo" />
 
     <EditText
-        android:id="@+id/cpcMemberLoginEmailAddress"
+        android:id="@+id/cpcLogInEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -64,8 +64,9 @@
         android:textColor="#000000"
         android:textColorHint="#000000"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.50"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cpcMemberLoginEmailAddress" />
+        app:layout_constraintTop_toBottomOf="@+id/cpcLogInEmail" />
 
     <Button
         android:id="@+id/cpcMemberLoginButton"
