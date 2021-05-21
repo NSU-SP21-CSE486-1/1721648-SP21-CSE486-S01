@@ -18,7 +18,8 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class logInCpcMember extends AppCompatActivity implements View.OnClickListener {
-    private TextView cpcMemberLoginActReg ,cpcMemberLoginForgotPass;
+    private TextView cpcMemberLoginActReg;
+    TextView cpcMemberLoginForgotPassward;
     private EditText cpcLogInEmail ,cpcLogInPassward ;
     private Button cpcLogInButton;
     private FirebaseAuth mAuth;
@@ -31,7 +32,7 @@ public class logInCpcMember extends AppCompatActivity implements View.OnClickLis
         cpcLogInEmail=(EditText)findViewById(R.id.cpcLogInEmail) ;
         cpcLogInPassward=(EditText)findViewById(R.id.cpcMemberLoginPassword) ;
         cpcLogInButton=(Button)findViewById(R.id.cpcMemberLoginButton) ;
-        cpcMemberLoginForgotPass=(TextView)findViewById(R.id.cpcMemberLoginForgotPass);
+        cpcMemberLoginForgotPassward=(TextView)findViewById(R.id.cpcMemberLoginForgotPass);
         mAuth=FirebaseAuth.getInstance();
         
         cpcMemberLoginActReg.setOnClickListener(this);
@@ -44,7 +45,7 @@ public class logInCpcMember extends AppCompatActivity implements View.OnClickLis
                 startActivity(new Intent(this, CpcmemberSignUpActivity.class));
                 break;
             case R.id.cpcMemberLoginForgotPass:
-                startActivity(new Intent(this,StudentForgotPassward.class));
+                startActivity(new Intent(this,cpcForgotPassward.class));
                 break;
             case R.id.cpcMemberLoginButton:
                 cpcUserLogin();
