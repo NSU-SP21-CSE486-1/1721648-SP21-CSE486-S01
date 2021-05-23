@@ -27,4 +27,40 @@
     <string name="todo14">TODO</string>
     <string name="cpcmemberlogin">CPC Member Log in</string>
     <string name="resetpassward">Reset Passward</string>
+    <string name="school_string">School</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="nsu_mail_id">Nsu mail Id</string>
+    <string name="student_id">Student id</string>
+    <string name="student_idnew">7 digit of student Id</string>
+    <string name="nidtextView" >National Id</string>
+    <string-array name="School_of_nsu">
+        <item>School of Business &amp; Economics</item>
+        <item>School of Engineering &amp; Physical Sciences</item>
+        <item>School of Humanities &amp; Social Sciences</item>
+        <item>School of Health &amp; Life Sciences</item>
+    </string-array>
+
+    <string-array name="Department_of_nsu">
+        <item>Department of Electrical Engineering &amp; Computer Science</item>
+        <item>Department of Architecture</item>
+        <item>Department of Environmental Science and Management</item>
+        <item>School of Health &amp; Life Sciences</item>
+        <item>Bachelor of Business Administration</item>
+        <item>Master of Business Administration</item>
+        <item>Department of Economics</item>
+        <item>Department of General and Continue Education</item>
+        <item>Department of English</item>
+        <item>Department of Biochemistry and Microbiology</item>
+        <item>Department of Public Health</item>
+        <item>Department of Pharmacy</item>
+
+        </string-array>
+    <string name="Department_Name_String">Department Name</string>
+    <string name="Present_address_string">Present address</string>
+
+    <string name="Present_address_hint">Country,District,Post Office,PoliceStation,Postal Code,House/Village/City,Road/Block/Sector</string>
+    <string name="Permanent_address_string">Permanent address</string>
+    <string name="Birth_Date_string">Date of Birth</string>
+    <string name="Birth_Date_hint">Date/Month/Year</string>
+    <string name="button_save_text">Save</string>
 </resources>
