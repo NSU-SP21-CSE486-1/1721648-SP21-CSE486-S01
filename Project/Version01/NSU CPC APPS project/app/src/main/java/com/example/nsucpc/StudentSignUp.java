@@ -45,6 +45,8 @@ public class StudentSignUp extends AppCompatActivity implements View.OnClickList
         buttonSignUpStudent.setOnClickListener(this);
 
 
+
+
     }
 
     @Override
@@ -136,7 +138,7 @@ public class StudentSignUp extends AppCompatActivity implements View.OnClickList
                     });
 
                     //finish();
-                   // Intent intent=new Intent(getApplicationContext(),StudentLogIn.class);
+                    // Intent intent=new Intent(getApplicationContext(),StudentLogIn.class);
                     //intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     //startActivity(intent);
 

@@ -32,7 +32,7 @@
     <string name="nsu_mail_id">Nsu mail Id</string>
     <string name="student_id">Student id</string>
     <string name="student_idnew">7 digit of student Id</string>
-    <string name="nidtextView" >National Id</string>
+    <string name="nidtextView">National Id</string>
     <string-array name="School_of_nsu">
         <item>School of Business &amp; Economics</item>
         <item>School of Engineering &amp; Physical Sciences</item>
@@ -54,7 +54,7 @@
         <item>Department of Public Health</item>
         <item>Department of Pharmacy</item>
 
-        </string-array>
+    </string-array>
     <string name="Department_Name_String">Department Name</string>
     <string name="Present_address_string">Present address</string>
 
