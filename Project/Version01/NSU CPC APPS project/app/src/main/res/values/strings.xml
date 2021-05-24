@@ -73,5 +73,6 @@
     <string name="Skillstring">Skills</string>
     <string name="uploadPdfstring">Upload a documents</string>
     <string name="companynamestring">Company Name</string>
+    <string name="postjobstring">Post Job</string>
 
 </resources>

@@ -54,41 +54,40 @@ public class logInCpcMember extends AppCompatActivity implements View.OnClickLis
         }
     }
     private void cpcUserLogin() {
-        String email=cpcLogInEmail.getText().toString().trim();
-        String password=cpcLogInPassward.getText().toString().trim();
-        if(email.isEmpty()){
+        String Cemail=cpcLogInEmail.getText().toString().trim();
+        String Cpassword=cpcLogInPassward.getText().toString().trim();
+        if(Cemail.isEmpty()){
             cpcLogInEmail.setError("Nsu Mail id is Required");
             cpcLogInEmail.requestFocus();
             return;
 
         }
-        if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
+        if (!Patterns.EMAIL_ADDRESS.matcher(Cemail).matches()){
             cpcLogInEmail.setError("Please input valid mail address");
             cpcLogInEmail.requestFocus();
             return;
 
         }
 
-        if(password.isEmpty()){
+        if(Cpassword.isEmpty()){
             cpcLogInPassward.setError("Fill Up passward field");
             cpcLogInPassward.requestFocus();
             return;
         }
-        if(password.length()<6){
+        if(Cpassword.length()<6){
             cpcLogInPassward.setError("Min passward length should be 6 characters");
             cpcLogInPassward.requestFocus();
             return;
 
         }
-        mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+        mAuth.createUserWithEmailAndPassword(Cemail, Cpassword).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful())
                 {
                     finish();
-                    Intent intent=new Intent(getApplicationContext(),MemberStudentPortal.class);
-                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                    startActivity(intent);
+                    startActivity(new Intent(getApplicationContext(),cpcHomePage.class));
+                    Toast.makeText(getApplicationContext(),"Log In Successfull",Toast.LENGTH_SHORT).show();
                 }
 
                 else{

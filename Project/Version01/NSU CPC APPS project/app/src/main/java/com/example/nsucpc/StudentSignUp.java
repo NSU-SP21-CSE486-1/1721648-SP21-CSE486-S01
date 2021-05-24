@@ -53,7 +53,7 @@ public class StudentSignUp extends AppCompatActivity implements View.OnClickList
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.signinTextViewIdstudent:
-                startActivity(new Intent(this,StudentLogIn.class));
+                startActivity(new Intent(this,logInCpcMember.class));
                 break;
             case R.id.buttonSignUpStudent:
                 StudentSignUp();

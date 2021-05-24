@@ -89,7 +89,7 @@ public class CpcmemberSignUpActivity extends AppCompatActivity implements View.O
             public void onComplete(@NonNull @NotNull Task<AuthResult> task) {
                 if (task.isSuccessful()){
                     finish();
-                     Intent intent=new Intent(getApplicationContext(),StudentLogIn.class);
+                     Intent intent=new Intent(getApplicationContext(),cpcHomePage.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivity(intent);
                 }
