@@ -1,5 +1,8 @@
 package com.example.nsucpc.Model;
 
+
+
+
 public class Data {
 
     String title,companytitle,salary,skill,workexperience,joblocation,id,date;
@@ -17,6 +20,7 @@ public class Data {
         this.joblocation = joblocation;
         this.id = id;
         this.date = date;
+
     }
 
     public String getTitle() {
@@ -58,6 +62,8 @@ public class Data {
     public void setWorkexperience(String workexperience) {
         this.workexperience = workexperience;
     }
+
+
 
     public String getJoblocation() {
         return joblocation;
