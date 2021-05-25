@@ -1,23 +1,23 @@
 package com.example.nsucpc.Model;
 
 
+import android.text.style.TtsSpan;
 
+public class Data extends TtsSpan.Builder<TtsSpan.Builder> {
 
-public class Data {
-
-    String title,companytitle,salary,skill,workexperience,joblocation,id,date;
+    String title,companytitle,salary,skill,workexperience,jobdescription,id,date;
 
     public Data(){
 
     }
 
-    public Data(String title, String companytitle, String salary, String skill, String workexperience, String joblocation, String id, String date) {
+    public Data(String title, String companytitle, String salary, String skill, String workexperience, String jobdescription, String id, String date) {
         this.title = title;
         this.companytitle = companytitle;
         this.salary = salary;
         this.skill = skill;
         this.workexperience = workexperience;
-        this.joblocation = joblocation;
+        this.jobdescription = jobdescription;
         this.id = id;
         this.date = date;
 
@@ -66,11 +66,11 @@ public class Data {
 
 
     public String getJoblocation() {
-        return joblocation;
+        return jobdescription;
     }
 
     public void setJoblocation(String joblocation) {
-        this.joblocation = joblocation;
+        this.jobdescription = joblocation;
     }
 
     public String getId() {

@@ -29,7 +29,7 @@ import java.text.DateFormat;
 import java.util.Date;
 
 public class InsertJobPostActivity extends AppCompatActivity {
-    private EditText jobTitle,companyName,Salaryedit,skillEdit,workExperience,jobLocation;
+    private EditText jobTitle,companyName,Salaryedit,skillEdit,workExperience,jobDescription;
     private ImageView uploadpdfFile;
     Uri imageuri = null;//uri is the URL THAT ARE MEANS FOR LOCAL STORAGE
 
@@ -39,6 +39,8 @@ public class InsertJobPostActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
     private DatabaseReference mJobPost;
+    private DatabaseReference  mPublicDatabase;
+
 
 
     @Override
@@ -50,7 +52,7 @@ public class InsertJobPostActivity extends AppCompatActivity {
         Salaryedit=(EditText)findViewById(R.id.SalaryeditTextNumber);
         skillEdit=(EditText)findViewById(R.id.skilEditText);
         workExperience=(EditText)findViewById(R.id.workExperienceeditText);
-        jobLocation=(EditText)findViewById(R.id.LocationEditText);
+        jobDescription=(EditText)findViewById(R.id.LocationEditText);
         PostJobButtonCPC=(Button)findViewById(R.id.addPostSaveButton);
         uploadpdfFile=(ImageView)findViewById(R.id.imageViewPdf);
 
@@ -75,6 +77,8 @@ public class InsertJobPostActivity extends AppCompatActivity {
         FirebaseUser mUser=mAuth.getCurrentUser();
         String uId=mUser.getUid();
         mJobPost= FirebaseDatabase.getInstance().getReference().child("Job Post").child(uId);
+        mPublicDatabase=FirebaseDatabase.getInstance().getReference().child("public database");
+
 
 
         PostJobButtonCPC.setOnClickListener(new View.OnClickListener() {
@@ -85,7 +89,7 @@ public class InsertJobPostActivity extends AppCompatActivity {
                 String salary=Salaryedit.getText().toString().trim();
                 String skill=skillEdit.getText().toString().trim();
                 String workexperience=workExperience.getText().toString().trim();
-                String joblocation=jobLocation.getText().toString().trim();
+                String jobdescription=jobDescription.getText().toString().trim();
                 if(TextUtils.isEmpty(title)){
                     jobTitle.setError("Please Fill Up Job Title");
                     return;
@@ -111,8 +115,8 @@ public class InsertJobPostActivity extends AppCompatActivity {
                     return;
 
                 }
-                if(TextUtils.isEmpty(joblocation)){
-                    jobLocation.setError("Please Fill Up jobLocation Field ");
+                if(TextUtils.isEmpty(jobdescription)){
+                    jobDescription.setError("Please Fill Up jobLocation Field ");
                     return;
 
                 }
@@ -120,8 +124,9 @@ public class InsertJobPostActivity extends AppCompatActivity {
                 String id=mJobPost.push().getKey();
                 String date= DateFormat.getDateInstance().format(new Date());
 
-                Data data = new Data(title,companytitle,salary,skill,workexperience,joblocation,id,date);
+                Data data = new Data(title,companytitle,salary,skill,workexperience,jobdescription,id,date);
                 mJobPost.child(id).setValue(data);
+                mPublicDatabase.child(id).setValue(data);
 
                 Toast.makeText(getApplicationContext(),"Successfull add post",Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(getApplicationContext(),PostJobActivity.class));
