@@ -68,7 +68,7 @@
     <string name="jobjobtitlestringTwo">Enter Job Title</string>
     <string name="salarystring">Salary</string>
     <string name="salarystringtwo"> Amount BDT </string>
-    <string name="joblocationstring">Job Location</string>
+    <string name="joblocationstring">Job Description</string>
     <string name="WorkExpriencestring">Work Experience</string>
     <string name="Skillstring">Skills</string>
     <string name="uploadPdfstring">Upload a documents</string>
