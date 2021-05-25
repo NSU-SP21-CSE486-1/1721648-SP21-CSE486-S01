@@ -74,5 +74,9 @@
     <string name="uploadPdfstring">Upload a documents</string>
     <string name="companynamestring">Company Name</string>
     <string name="postjobstring">Post Job</string>
+    <string name="companynameString">Company Name</string>
+    <string name="pdfshowstringbtn">Documents</string>
+    <string name="takasign">৳</string>
+    <string name="datacardstring">25 May 2021</string>
 
 </resources>
