@@ -34,12 +34,12 @@ public class InsertJobPostActivity extends AppCompatActivity {
     Uri imageuri = null;//uri is the URL THAT ARE MEANS FOR LOCAL STORAGE
 
     private Button PostJobButtonCPC ;
-
-    //Firebase
-
     private FirebaseAuth mAuth;
     private DatabaseReference mJobPost;
     private DatabaseReference  mPublicDatabase;
+    //Firebase
+
+
 
 
 

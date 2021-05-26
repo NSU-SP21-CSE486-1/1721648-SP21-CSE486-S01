@@ -129,7 +129,7 @@ public class StudentSignUp extends AppCompatActivity implements View.OnClickList
                         public void onComplete(@NonNull  Task<Void> task) {
                             if (task.isSuccessful()){
                                 finish();
-                                Intent intent=new Intent(getApplicationContext(),StudentAllPost.class);
+                                Intent intent=new Intent(getApplicationContext(),Profile.class);
                                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                                 startActivity(intent);
                                 Toast.makeText(getApplicationContext(),"User has been Registered successfully",Toast.LENGTH_SHORT).show();
