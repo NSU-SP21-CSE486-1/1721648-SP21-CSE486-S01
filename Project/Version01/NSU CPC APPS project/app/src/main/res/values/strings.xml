@@ -82,5 +82,7 @@
     <string name="documents">Documents</string>
     <string name="seepdfFile">Download/View PDF file</string>
     <string name="apply">Apply</string>
+    <string name="emailuser">Email</string>
+    <string name="updatebtn">Update</string>
 
 </resources>
