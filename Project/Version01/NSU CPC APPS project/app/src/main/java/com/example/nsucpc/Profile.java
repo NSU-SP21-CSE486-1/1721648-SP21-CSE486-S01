@@ -1,16 +1,12 @@
 package com.example.nsucpc;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -26,8 +22,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.Calendar;
 
-public class Profile extends AppCompatActivity  {
-
+public class Profile extends AppCompatActivity {
     private EditText name,phone,emailAdress,studentId,presentAddress,permanentAddress,nId ;
     private DatePickerDialog datePickerDialog;
     private Button dateButton;
@@ -37,8 +32,6 @@ public class Profile extends AppCompatActivity  {
     String[] DepartmentNames;
     DatabaseReference databaseReference;
     FirebaseAuth mAuth;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,7 +46,7 @@ public class Profile extends AppCompatActivity  {
         studentId = findViewById(R.id.studentid);
         presentAddress = findViewById(R.id.presentAddressText);
         permanentAddress = findViewById(R.id.Permanent_address_id);
-        nId = findViewById(R.id.Nid);
+        nId = findViewById(R.id.stuNid);
         databaseReference= FirebaseDatabase.getInstance().getReference().child("Student Information").child(uId);
 
 
@@ -66,45 +59,37 @@ public class Profile extends AppCompatActivity  {
         schoolName = findViewById(R.id.spinner);
         departmentName = findViewById(R.id.spinner2);
         DepartmentNames=getResources().getStringArray(R.array.Department_of_nsu);
-      //  ArrayAdapter<String> adapter=new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,DepartmentNames);
-      //  departmentName.setThreshold(1);
-       // departmentName.setAdapter(adapter);
+        //  ArrayAdapter<String> adapter=new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,DepartmentNames);
+        //  departmentName.setThreshold(1);
+        // departmentName.setAdapter(adapter);
 
         //Initialize Validation Style
 
         addInfo.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                String name1 = name.getText().toString().trim();
+                String phone1 = phone.getText().toString().trim();
+                String emailadress1 = emailAdress.getText().toString().trim();
+                String studentid1 = studentId.getText().toString().trim();
+                String presentadress1 = presentAddress.getText().toString().trim();
+                String permanentadress1 = permanentAddress.getText().toString().trim();
+                String birthDay1 = datePickerDialog.toString().trim();
+                String schoolName1=schoolName.getSelectedItem().toString().trim();
+                String departmentName1=departmentName.getText().toString().trim();
+                String Nid1=nId.getText().toString().trim();
+                //validation
 
 
-                if (name.getText().toString().isEmpty()
-                        || phone.getText().toString().isEmpty()
-                        || emailAdress.getText().toString().isEmpty()
-                        || studentId.getText().toString().isEmpty()
-                        || presentAddress.getText().toString().isEmpty()
-                        || permanentAddress.getText().toString().isEmpty()
-                        || datePickerDialog.toString().isEmpty()
-                        || schoolName.getSelectedItem().toString().isEmpty()
-                        || departmentName.getText().toString().isEmpty()
-                        ||nId.getText().toString().isEmpty()
 
-                ) {
-                    Toast.makeText(Profile.this, "Please fill up all Section", Toast.LENGTH_SHORT).show();
+                String id=databaseReference.push().getKey();
+                Student studentnew = new Student(name1,phone1,emailadress1,studentid1,presentadress1,permanentadress1,birthDay1,schoolName1,departmentName1,Nid1);
+                databaseReference.child(id).setValue(studentnew);
 
-                }
-                else if(phone.getText().toString().length()>11 || phone.getText().toString().length()<11){
-                    Toast.makeText(Profile.this, "Please input valid mobile number of 11 digits", Toast.LENGTH_SHORT).show();
-                }
-                else if(studentId.getText().toString().length()>7 || studentId.getText().toString().length()<7  ){
-                    Toast.makeText(Profile.this, "Please input your 7 digit of nsu id", Toast.LENGTH_SHORT).show();
-                }
-                else if(nId.getText().toString().length()>10 || nId.getText().toString().length()<10  ){
-                    Toast.makeText(Profile.this, "Please input your 10 digit of National id", Toast.LENGTH_SHORT).show();
-                }
+                Intent intent = new Intent(Profile.this,StudentAllPost.class);
+                startActivity(intent);
+                Toast.makeText(getApplicationContext(),"info added",Toast.LENGTH_SHORT).show();
 
 
-                else{
-                    saveData();
-                }
 
             }
 
@@ -115,37 +100,7 @@ public class Profile extends AppCompatActivity  {
 
     }
 
-    private void saveData() {
 
-            String name1 = name.getText().toString().trim();
-            String phone1 = phone.getText().toString().trim();
-            String emailadress1 = emailAdress.getText().toString().trim();
-            String studentid1 = studentId.getText().toString().trim();
-            String presentadress1 = presentAddress.getText().toString().trim();
-            String permanentadress1 = permanentAddress.getText().toString().trim();
-            String birthDay1 = datePickerDialog.toString().trim();
-            String schoolName1=schoolName.getSelectedItem().toString().trim();
-            String departmentName1=departmentName.getText().toString().trim();
-            String Nid1=nId.getText().toString().trim();
-            String id=databaseReference.push().getKey();
-            Student studentnew = new Student(name1,phone1,emailadress1,studentid1,presentadress1,permanentadress1,birthDay1,schoolName1,departmentName1,Nid1);
-            databaseReference.child(id).setValue(studentnew);
-            name.setText("");
-            phone.setText("");
-            studentId.setText("");
-            emailAdress.setText("");
-            presentAddress.setText("");
-            permanentAddress.setText("");
-            departmentName.setText("");
-            nId.setText("");
-            Intent intent = new Intent(Profile.this,StudentAllPost.class);
-            startActivity(intent);
-            Toast.makeText(getApplicationContext(),"info added",Toast.LENGTH_SHORT).show();
-
-
-
-
-    }
 
 
     private String getTodaysDate()

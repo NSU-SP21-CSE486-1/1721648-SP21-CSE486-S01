@@ -9,13 +9,13 @@ public class Student {
     public String school;
     public String departmentname;
     public String permanent_adress;
-    public String Nid;
+    public String studentNid;
 
     public Student(String name1, String phone1, String emailadress1, String studentid1, String presentadress1, String permanentadress1, String birthDay1, String schoolName1, String departmentName1, String nid1){
 
     }
 
-    public Student(String studentid, String studentname, String phonenumber, String email_adress, String present_adress, String school, String departmentname, String permanent_adress, String nid) {
+    public Student(String studentid, String studentname, String phonenumber, String email_adress, String present_adress, String school, String departmentname, String permanent_adress, String studentNid) {
         this.studentid = studentid;
         this.studentname = studentname;
         this.phonenumber = phonenumber;
@@ -24,7 +24,7 @@ public class Student {
         this.school = school;
         this.departmentname = departmentname;
         this.permanent_adress = permanent_adress;
-        Nid = nid;
+        this.studentNid = studentNid;
     }
 
     public String getStudentid() {
@@ -91,11 +91,11 @@ public class Student {
         this.permanent_adress = permanent_adress;
     }
 
-    public String getNid() {
-        return Nid;
+    public String getStudentNid() {
+        return studentNid;
     }
 
-    public void setNid(String nid) {
-        Nid = nid;
+    public void setStudentNid(String studentNid) {
+        this.studentNid = studentNid;
     }
 }

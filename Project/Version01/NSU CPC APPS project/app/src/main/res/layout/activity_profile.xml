@@ -91,7 +91,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.065"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/Nid" />
+            app:layout_constraintTop_toBottomOf="@+id/stuNid"
+            tools:ignore="UnknownId" />
 
         <TextView
             android:id="@+id/department_name_textview"
@@ -216,7 +217,7 @@
 
 
         <EditText
-            android:id="@+id/Nid"
+            android:id="@+id/stuNid"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
