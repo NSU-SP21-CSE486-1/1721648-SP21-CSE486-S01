@@ -1,10 +1,12 @@
 package com.example.nsucpc;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -38,9 +40,30 @@ import java.util.ArrayList;
         public void onBindViewHolder(@NonNull @NotNull com.example.nsucpc.CustomAdapterStudent.MyViewHolder holder, int position) {
             Data data =list.get(position);
             holder.setJobTitle(data.getTitle());
-            holder.setcompanytitle(data.getCompanytitle());
+            holder.setCompanytitle(data.getCompanytitle());
             holder.setJobDate(data.getDate());
             holder.setJobSalary(data.getSalary());
+
+
+
+
+            holder.myview.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent=new Intent(context.getApplicationContext(),JobDetailsActivity.class);
+                    
+                    intent.putExtra("title",data.getTitle());
+                    intent.putExtra("date",data.getDate());
+                    intent.putExtra("salary",data.getSalary());
+                    intent.putExtra("companytitle",data.getCompanytitle());
+                    intent.putExtra("joblocation",data.getJoblocation());
+                    intent.putExtra("workexperience",data.getWorkexperience());
+                    intent.putExtra("skill",data.getSkill());
+                    Toast.makeText(context.getApplicationContext(),"Button Clicked",Toast.LENGTH_SHORT).show();
+                    
+
+                }
+            });
 
         }
 
@@ -70,9 +93,21 @@ import java.util.ArrayList;
                 TextView mSalary=myview.findViewById(R.id.student_cpcSalaryCard);
                 mSalary.setText(salary);
             }
-            public void setcompanytitle (String companytitle){
+            public void setCompanytitle (String companytitle){
                 TextView mcompanytitle=myview.findViewById(R.id.student_companyNameCardCPC);
                 mcompanytitle.setText(companytitle);
+            }
+            public void setJoblocation (String joblocation){
+                TextView mJoblocation=myview.findViewById(R.id.jobDescrptionJobDetails);
+                mJoblocation.setText(joblocation);
+            }
+            public void setWorkexperience (String workexperience){
+                TextView mWorkexperience=myview.findViewById(R.id.workExperiencejobDetails);
+                mWorkexperience.setText(workexperience);
+            }
+            public void setJobSkills (String skill){
+                TextView mSkills=myview.findViewById(R.id.skillJobDetails);
+                mSkills.setText(skill);
             }
         }
     }
