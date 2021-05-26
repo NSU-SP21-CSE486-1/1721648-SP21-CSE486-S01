@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class studentPortalHomePage extends AppCompatActivity {
     private ImageButton allPostbutton,logoutButton,appliedJobButton,userProfileHomeButton;
 
@@ -36,6 +38,19 @@ public class studentPortalHomePage extends AppCompatActivity {
 
             }
         });
+        logoutButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FirebaseAuth.getInstance().signOut();
+                startActivity(new Intent(studentPortalHomePage.this,studentUser.class));
+
+               // Intent intent = new Intent(studentPortalHomePage.this,MemberStudentPortal.class);
+               // startActivity(intent);
+
+            }
+        });
+
+
 
 
 
