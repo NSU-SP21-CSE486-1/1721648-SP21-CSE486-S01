@@ -10,12 +10,45 @@
         android:id="@+id/addPostButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="200dp"
         android:background="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.149"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.38"
         app:srcCompat="@drawable/addpost" />
+
+    <ImageButton
+        android:id="@+id/cpcHomeViewJobButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:background="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/addPostButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/addPostButton"
+        app:layout_constraintVertical_bias="0.473"
+        app:srcCompat="@drawable/viewjobbtn" />
+
+    <ImageButton
+        android:id="@+id/cpcHomeAppliedJob"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="32dp"
+        android:background="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addPostButton"
+        app:srcCompat="@drawable/appliedimagebtn" />
+
+    <ImageButton
+        android:id="@+id/cpcLogOutButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:background="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/cpcHomeAppliedJob"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cpcHomeAppliedJob"
+        app:srcCompat="@drawable/LogOutiMAGE" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
