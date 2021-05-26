@@ -92,7 +92,7 @@ public class StudentLogIn extends AppCompatActivity implements View.OnClickListe
                 if (task.isSuccessful())
                 {
                     finish();
-                    Intent intent=new Intent(getApplicationContext(),MemberStudentPortal.class);
+                    Intent intent=new Intent(getApplicationContext(),StudentAllPost.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivity(intent);
                 }
