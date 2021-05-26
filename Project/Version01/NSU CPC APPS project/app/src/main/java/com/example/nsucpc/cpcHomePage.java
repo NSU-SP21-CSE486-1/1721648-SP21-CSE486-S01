@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class cpcHomePage extends AppCompatActivity {
     ImageButton addPost,cpcViewAllPost,cpcHomeAppliedCan,cpcLogOut;
 
@@ -21,7 +23,7 @@ public class cpcHomePage extends AppCompatActivity {
         addPost.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(getApplicationContext(),PostJobActivity.class);
+                Intent intent=new Intent(getApplicationContext(),InsertJobPostActivity.class);
                 startActivity(intent);
 
             }
@@ -31,6 +33,18 @@ public class cpcHomePage extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent=new Intent(getApplicationContext(),PostJobActivity.class);
                 startActivity(intent);
+            }
+        });
+
+        cpcLogOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FirebaseAuth.getInstance().signOut();
+                startActivity(new Intent(cpcHomePage.this,MemberStudentPortal.class));
+
+                // Intent intent = new Intent(studentPortalHomePage.this,MemberStudentPortal.class);
+                // startActivity(intent);
+
             }
         });
 
