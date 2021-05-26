@@ -90,6 +90,7 @@ public class CpcmemberSignUpActivity extends AppCompatActivity implements View.O
                 if (task.isSuccessful()){
                     finish();
                      Intent intent=new Intent(getApplicationContext(),cpcHomePage.class);
+                    Toast.makeText(getApplicationContext(),"User has been Registered successfully",Toast.LENGTH_SHORT).show();
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivity(intent);
                 }

@@ -12,27 +12,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NSUCPC">
-        <activity android:name=".studentPortalHomePage">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".studentPortalHomePage"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".studentUserProfile">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".studentUserProfile"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".Profile">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".Profile"/>
         <activity android:name=".JobDetailsActivity" />
         <activity android:name=".StudentAllPost" />
         <activity android:name=".InsertJobPostActivity" />

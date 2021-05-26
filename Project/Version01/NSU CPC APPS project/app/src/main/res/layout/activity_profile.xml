@@ -208,6 +208,7 @@
             android:text="@string/button_save_text"
             android:textSize="24sp"
             android:textStyle="bold"
+            android:background="#FFE500"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.204"
@@ -241,5 +242,5 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/studentid" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

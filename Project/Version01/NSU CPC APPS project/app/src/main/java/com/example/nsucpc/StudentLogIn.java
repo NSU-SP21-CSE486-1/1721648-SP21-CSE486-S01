@@ -86,14 +86,15 @@ public class StudentLogIn extends AppCompatActivity implements View.OnClickListe
             return;
 
         }
-        mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+        mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful())
                 {
                     finish();
-                    Intent intent=new Intent(getApplicationContext(),StudentAllPost.class);
+                    Intent intent=new Intent(StudentLogIn.this,studentPortalHomePage.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                    Toast.makeText(getApplicationContext(),"Successfully log in",Toast.LENGTH_SHORT).show();
                     startActivity(intent);
                 }
 

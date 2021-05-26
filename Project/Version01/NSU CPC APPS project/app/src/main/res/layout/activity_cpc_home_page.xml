@@ -49,6 +49,6 @@
         app:layout_constraintBottom_toBottomOf="@+id/cpcHomeAppliedJob"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/cpcHomeAppliedJob"
-        app:srcCompat="@drawable/LogOutiMAGE" />
+        app:srcCompat="@drawable/imagelogout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -33,8 +33,9 @@ public class studentPortalHomePage extends AppCompatActivity {
         userProfileHomeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(studentPortalHomePage.this,studentUser.class);
+                Intent intent = new Intent(studentPortalHomePage.this,studentUserProfile.class);
                 startActivity(intent);
+
 
             }
         });
@@ -42,7 +43,7 @@ public class studentPortalHomePage extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 FirebaseAuth.getInstance().signOut();
-                startActivity(new Intent(studentPortalHomePage.this,studentUser.class));
+                startActivity(new Intent(studentPortalHomePage.this,MemberStudentPortal.class));
 
                // Intent intent = new Intent(studentPortalHomePage.this,MemberStudentPortal.class);
                // startActivity(intent);

@@ -85,7 +85,7 @@ public class Profile extends AppCompatActivity {
                 Student studentnew = new Student(name1,phone1,emailadress1,studentid1,presentadress1,permanentadress1,birthDay1,schoolName1,departmentName1,Nid1);
                 databaseReference.child(id).setValue(studentnew);
 
-                Intent intent = new Intent(Profile.this,StudentAllPost.class);
+                Intent intent = new Intent(Profile.this,studentPortalHomePage.class);
                 startActivity(intent);
                 Toast.makeText(getApplicationContext(),"info added",Toast.LENGTH_SHORT).show();
 

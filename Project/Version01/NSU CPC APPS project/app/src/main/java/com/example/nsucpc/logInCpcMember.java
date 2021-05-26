@@ -36,6 +36,9 @@ public class logInCpcMember extends AppCompatActivity implements View.OnClickLis
         mAuth=FirebaseAuth.getInstance();
         
         cpcMemberLoginActReg.setOnClickListener(this);
+        cpcLogInButton.setOnClickListener(this);
+        cpcMemberLoginForgotPassward.setOnClickListener(this);
+
     }
 
     @Override
@@ -80,7 +83,7 @@ public class logInCpcMember extends AppCompatActivity implements View.OnClickLis
             return;
 
         }
-        mAuth.createUserWithEmailAndPassword(Cemail, Cpassword).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+        mAuth.signInWithEmailAndPassword(Cemail, Cpassword).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful())
