@@ -45,7 +45,7 @@ public class PostJobActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         FirebaseUser mUser = mAuth.getCurrentUser();
         String uId = mUser.getUid();
-        JobPostDatabase = FirebaseDatabase.getInstance().getReference().child("Job Post").child(uId);
+        JobPostDatabase = FirebaseDatabase.getInstance().getReference().child("public database").child(uId);
         recyclerView = findViewById(R.id.recycler_job_post_id);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);

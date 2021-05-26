@@ -9,6 +9,7 @@ import android.os.Bundle;
 
 import com.example.nsucpc.Model.Data;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -26,13 +27,15 @@ public class StudentAllPost extends AppCompatActivity {
     ArrayList<Data> list;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student_all_post);
-        JobPostDatabase = FirebaseDatabase.getInstance().getReference().child("Job Post");
+
         recyclerView = findViewById(R.id.recyclerStudentAllJobPost);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        JobPostDatabase = FirebaseDatabase.getInstance().getReference().child("public database");
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         layoutManager.setStackFromEnd(true);
         layoutManager.setReverseLayout(true);
