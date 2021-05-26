@@ -8,7 +8,7 @@
     tools:context=".studentPortalHomePage">
 
     <ImageButton
-        android:id="@+id/kogOutImgButton"
+        android:id="@+id/logOutImgButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
@@ -27,11 +27,11 @@
         android:layout_marginTop="32dp"
         android:background="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton5"
+        app:layout_constraintTop_toBottomOf="@+id/viewallPostHome"
         app:srcCompat="@drawable/appliedimagebtn" />
 
     <ImageButton
-        android:id="@+id/imageButton5"
+        android:id="@+id/viewallPostHome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -47,9 +47,9 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="32dp"
         android:background="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/imageButton5"
+        app:layout_constraintBottom_toBottomOf="@+id/viewallPostHome"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageButton5"
+        app:layout_constraintTop_toTopOf="@+id/viewallPostHome"
         app:srcCompat="@drawable/userProfileImage" />
 
     <TextView
