@@ -36,6 +36,8 @@ public class StudentAllPost extends AppCompatActivity {
         recyclerView = findViewById(R.id.recyclerStudentAllJobPost);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         JobPostDatabase = FirebaseDatabase.getInstance().getReference().child("public database");
+        JobPostDatabase.keepSynced(true);
+
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         layoutManager.setStackFromEnd(true);
         layoutManager.setReverseLayout(true);
