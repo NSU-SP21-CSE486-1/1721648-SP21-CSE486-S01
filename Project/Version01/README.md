@@ -147,7 +147,16 @@ Roadblocks :
 
 
 There were several number of issues, and numerous barriers were faced during the app design and development process.First of all ,I updated android studio version 4.2.1 then I
-faced many bugs to run this apps .after updating android studio i could not 
+faced many bugs to run this apps .after updating android studio i could not design layout.xml file in design part .I searched that problem issue on stackoverflow and youtube .After following the required solution process I could not solve that problem .
+
+
+![Screenshot (109)](https://user-images.githubusercontent.com/58458609/119767097-13d6f500-bed8-11eb-8711-022d0c708429.png)
+
+![image](https://user-images.githubusercontent.com/58458609/119767366-8051f400-bed8-11eb-9e4d-62ac8cc83a55.png)
+
+
+Another problem I faced to store profile information data in real time database and also faced problem to store pdf file with all job post information in real time database.I could store pdf file in firbase storage but when I put the pdf file with all job post data in a same  child in Real-Time database ,there shaw more of bugs from there and i could put only single pdf file data in a one child perticular id .
+
  
  
 
