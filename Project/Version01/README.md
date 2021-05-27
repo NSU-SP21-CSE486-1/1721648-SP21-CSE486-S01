@@ -56,4 +56,34 @@ For these apps, NSU CPC members no longer have to post job vacancies on social m
 
 ![image](https://user-images.githubusercontent.com/58458609/119762102-e5085100-bece-11eb-91e3-e835de707987.png)
 
+Forgot PassWard :If any User Forgot their Passward ,then he/she can reset passward from there .An email will be sent to the user to the reset there Passward by clicking reset passward button.
+
+![image](https://user-images.githubusercontent.com/58458609/119762353-58aa5e00-becf-11eb-83f1-797b2e3b6abe.png)
+
+
+
+------Add Information------
+
+![image](https://user-images.githubusercontent.com/58458609/119763100-b25f5800-bed0-11eb-9964-1849b69b8bf7.png)
+
+
+![image](https://user-images.githubusercontent.com/58458609/119763163-d28f1700-bed0-11eb-87d3-4e00beb82b3a.png)
+
+
+
+-------STUDENT PORTAL HOME PAGE------------
+
+
+![image](https://user-images.githubusercontent.com/58458609/119762791-2f3e0200-bed0-11eb-91f4-0a807009f614.png)
+
+
+
+-------View Job--------
+
+![image](https://user-images.githubusercontent.com/58458609/119762975-8512aa00-bed0-11eb-8951-4be820ad79a4.png)
+
+
+
+
+
 
