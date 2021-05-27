@@ -135,8 +135,13 @@ CPC Forgot Passward ;:If CPC member forgot their Passward ,then he/she can reset
 
 Data Management
 
-The data of this app is managed by Firebase Database.The authentication,registration data ,student information,all job post data are managed by via Firebase Database.Firebase storage are using for store pdf file .Registration ,student information,job post data are stored in Real-Time Database by using Firebase. 
+The data of this app is managed by Firebase Database.The authentication,registration data ,student information,all job post data are managed by via Firebase Database.Firebase storage are using for store pdf file .Registration ,student information,job post data are stored in Real-Time Database by using Firebase.
 
+
+Design Pattern
+
+
+The software is followed by an design patterns. But due to a lack of time I couldn't do exactly like the design  patterns but it is highly matches with the Observer design pattern of the MVC architecture.
  
  
 
