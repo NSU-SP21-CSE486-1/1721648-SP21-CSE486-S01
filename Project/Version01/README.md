@@ -26,5 +26,34 @@ For these apps, NSU CPC members no longer have to post job vacancies on social m
 
 2 .Features
 
-#Student Portal
+
+###splash screen
+
+![Screenshot (108)](https://user-images.githubusercontent.com/58458609/119761422-93ab9200-becd-11eb-9dc6-8ce2696212f6.png)
+
+
+###CPC MEMBER /Student Portal
+
+
+![image](https://user-images.githubusercontent.com/58458609/119761594-e2f1c280-becd-11eb-8bdf-887fdd6e960f.png)
+
+
+
+
+
+
+---------------Student Portal----------------------
+
+ Login and Registration : The NSU CPC app has a simple interface for  Login and Registration users on a single screen .
+ 
+ Student Login
+ 
+ 
+ ![image](https://user-images.githubusercontent.com/58458609/119761986-abcfe100-bece-11eb-8e7a-afedfbb84173.png)
+ 
+ Student Registration 
+
+
+![image](https://user-images.githubusercontent.com/58458609/119762102-e5085100-bece-11eb-91e3-e835de707987.png)
+
 
