@@ -133,15 +133,21 @@ CPC Forgot Passward ;:If CPC member forgot their Passward ,then he/she can reset
 ![image](https://user-images.githubusercontent.com/58458609/119764468-44686000-bed3-11eb-936b-96576d57f815.png)
 
 
-Data Management
+Data Management:
 
 The data of this app is managed by Firebase Database.The authentication,registration data ,student information,all job post data are managed by via Firebase Database.Firebase storage are using for store pdf file .Registration ,student information,job post data are stored in Real-Time Database by using Firebase.
 
 
-Design Pattern
+Design Pattern :
 
 
 The software is followed by an design patterns. But due to a lack of time I couldn't do exactly like the design  patterns but it is highly matches with the Observer design pattern of the MVC architecture.
+
+Roadblocks :
+
+
+There were several number of issues, and numerous barriers were faced during the app design and development process.First of all ,I updated android studio version 4.2.1 then I
+faced many bugs to run this apps .after updating android studio i could not 
  
  
 
