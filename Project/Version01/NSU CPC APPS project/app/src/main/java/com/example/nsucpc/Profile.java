@@ -6,6 +6,7 @@ import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
@@ -78,6 +79,72 @@ public class Profile extends AppCompatActivity {
                 String departmentName1=departmentName.getText().toString().trim();
                 String Nid1=nId.getText().toString().trim();
                 //validation
+                if(emailadress1.isEmpty()){
+                    emailAdress.setError("Nsu Mail id is Required");
+                    emailAdress.requestFocus();
+                    return;
+
+                }
+                if (!Patterns.EMAIL_ADDRESS.matcher(emailadress1).matches()){
+                    emailAdress.setError("Please input valid mail address");
+                    emailAdress.requestFocus();
+                    return;
+
+                }
+                if(name1.isEmpty()){
+                    name.setError("Fill Up Your name");
+                    name.requestFocus();
+                    return;
+                }
+                if(Nid1.isEmpty()){
+                    nId.setError("Fill Up your 10th digit nId Number");
+                    nId.requestFocus();
+                    return;
+                }
+                if(Nid1.length()<10 || Nid1.length()>10){
+                    nId.setError("Min NID length should be 10 characters");
+                    nId.requestFocus();
+                    return;
+
+                }
+                if(studentid1.isEmpty()){
+                    studentId.setError("Fill Up your nsu student id");
+                    studentId.requestFocus();
+                    return;
+                }
+                if(studentid1.length()>7 ||studentid1.length()<7){
+                    studentId.setError("Please input your 7 digit of nsu id");
+                    studentId.requestFocus();
+                    return;
+                }
+                if(phone1.isEmpty()){
+                    phone.setError("Fill Up Your Mobile Number");
+                    phone.requestFocus();
+                    return;
+                }
+                if(phone1.length()>11 ||phone1.length()<11){
+                    phone.setError("Please input valid mobile number of 11 digits");
+                    phone.requestFocus();
+                    return;
+                }
+                if(departmentName1.isEmpty()){
+                    departmentName.setError("Fill Up Your name");
+                    departmentName.requestFocus();
+                    return;
+                }
+                if(permanentadress1.isEmpty()){
+                    permanentAddress.setError("Fill Up Your name");
+                    permanentAddress.requestFocus();
+                    return;
+                }
+                if(presentadress1.isEmpty()){
+                    presentAddress.setError("Fill Up Your name");
+                    presentAddress.requestFocus();
+                    return;
+                }
+
+
+
 
 
 
