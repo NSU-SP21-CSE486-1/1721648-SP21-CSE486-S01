@@ -83,6 +83,46 @@ Forgot PassWard :If any User Forgot their Passward ,then he/she can reset passwa
 ![image](https://user-images.githubusercontent.com/58458609/119762975-8512aa00-bed0-11eb-8951-4be820ad79a4.png)
 
 
+-------View Job Details------
+
+![image](https://user-images.githubusercontent.com/58458609/119763427-51844f80-bed1-11eb-96b5-eada956f0c56.png)
+
+
+------User Profile-------
+
+![image](https://user-images.githubusercontent.com/58458609/119763593-a922bb00-bed1-11eb-9943-294e56145400.png)
+
+
+
+
+
+
+-----Features of CPC Member Portal----------
+
+
+ Login and Registration : The NSU CPC app has a simple interface for  Login and Registration users on a single screen .
+ 
+  CPC Login
+ 
+ 
+ ![image](https://user-images.githubusercontent.com/58458609/119763865-29e1b700-bed2-11eb-8682-4bfb6414095e.png)
+
+
+  CPC Registration
+  
+  ![image](https://user-images.githubusercontent.com/58458609/119763935-4c73d000-bed2-11eb-922b-551d1ef056bc.png)
+
+
+CPC Forgot Passward ;:If CPC member forgot their Passward ,then he/she can reset passward from there .An email will be sent to the user to the reset there Passward by clicking reset passward button.
+
+![image](https://user-images.githubusercontent.com/58458609/119763986-63b2bd80-bed2-11eb-83a8-f792c973df28.png)
+
+ 
+ 
+
+
+
+
 
 
 
